@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EA53C25E2379A8B000C7A2C8 /* CalculatorButtonItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA53C25D2379A8B000C7A2C8 /* CalculatorButtonItem.swift */; };
 		EA5C2325236C0BFA001BDDFD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA5C2324236C0BFA001BDDFD /* AppDelegate.swift */; };
 		EA5C2327236C0BFA001BDDFD /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA5C2326236C0BFA001BDDFD /* SceneDelegate.swift */; };
 		EA5C2329236C0BFA001BDDFD /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA5C2328236C0BFA001BDDFD /* ContentView.swift */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		EA53C25D2379A8B000C7A2C8 /* CalculatorButtonItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorButtonItem.swift; sourceTree = "<group>"; };
 		EA5C2321236C0BFA001BDDFD /* SwiftUICal.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftUICal.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA5C2324236C0BFA001BDDFD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EA5C2326236C0BFA001BDDFD /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -59,6 +61,7 @@
 				EA5C2324236C0BFA001BDDFD /* AppDelegate.swift */,
 				EA5C2326236C0BFA001BDDFD /* SceneDelegate.swift */,
 				EA5C2328236C0BFA001BDDFD /* ContentView.swift */,
+				EA53C25D2379A8B000C7A2C8 /* CalculatorButtonItem.swift */,
 				EA5C232A236C0BFE001BDDFD /* Assets.xcassets */,
 				EA5C232F236C0BFE001BDDFD /* LaunchScreen.storyboard */,
 				EA5C2332236C0BFE001BDDFD /* Info.plist */,
@@ -148,6 +151,7 @@
 			files = (
 				EA5C2325236C0BFA001BDDFD /* AppDelegate.swift in Sources */,
 				EA5C2327236C0BFA001BDDFD /* SceneDelegate.swift in Sources */,
+				EA53C25E2379A8B000C7A2C8 /* CalculatorButtonItem.swift in Sources */,
 				EA5C2329236C0BFA001BDDFD /* ContentView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
