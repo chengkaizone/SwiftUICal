@@ -32,7 +32,8 @@ struct ContentView: View {
             }
             Text(model.brain.output)
                 .font(.system(size: 76))
-                .padding(.trailing, 24)
+                .minimumScaleFactor(0.5)
+                .padding(.horizontal, 24 * scale)
                 .lineLimit(1)
                 .frame(minWidth: 0, maxWidth: .infinity, alignment: .trailing)
             CalculatorButtonPad().padding(.bottom)

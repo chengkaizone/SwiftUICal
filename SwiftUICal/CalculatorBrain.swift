@@ -18,11 +18,10 @@ enum CalculatorBrain {
         let result: String
         switch self {
         case .left(let left): result = left
-        
-        default:
-            result = ""
+        case .leftOp(let left, _): result = left
+        case .leftOpRight(_ , _, let right): result = right
+        case .error: return "Error"
         }
-        
         guard let value = Double(result) else {
             return "Error"
         }

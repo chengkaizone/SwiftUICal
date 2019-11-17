@@ -11,8 +11,6 @@ import Combine
 
 class CalculatorModel: ObservableObject {
     
-    let objectWillChange = PassthroughSubject<Void, Never>()
-    
     @Published var brain: CalculatorBrain = .left("0")
     @Published var history: [CalculatorButtonItem] = []
     
