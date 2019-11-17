@@ -30,13 +30,17 @@ struct CalculatorButton : View {
 }
 
 struct CalculatorButtonRow: View {
+    
     let row: [CalculatorButtonItem]
+    //@Binding var brain: CalculatorBrain
+    @EnvironmentObject var model: CalculatorModel
     
     var body: some View {
         HStack {
             ForEach(row, id: \.self) { item in
                 CalculatorButton(title: item.title, size: item.size, backgroundColorName: item.backgroundColorName) {
-                    print("Button: \(item.title)")
+                    //self.brain = self.brain.apply(item: item)
+                    self.model.apply(item)
                 }
             }
         }
@@ -44,6 +48,10 @@ struct CalculatorButtonRow: View {
 }
 
 struct CalculatorButtonPad: View {
+    
+    //@Binding var brain: CalculatorBrain
+    var model: CalculatorModel
+    
     let pad: [[CalculatorButtonItem]] = [
         [.command(.clear), .command(.flip), .command(.percent), .op(.divide)],
         [.digit(7), .digit(8), .digit(9), .op(.multiply)],

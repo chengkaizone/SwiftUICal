@@ -29,6 +29,7 @@ enum CalculatorBrain {
         return formatter.string(from: value as NSNumber)!
     }
     
+    @discardableResult
     func apply(item: CalculatorButtonItem) -> CalculatorBrain {
         switch item {
         case .digit(let num):
