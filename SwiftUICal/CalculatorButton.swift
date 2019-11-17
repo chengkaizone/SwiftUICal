@@ -15,13 +15,14 @@ struct CalculatorButton : View {
     let title: String
     var size: CGSize
     let backgroundColorName: String
+    let foregroundColor: Color
     let action: () ->Void
     
     var body: some View {
         return Button(action: action) {
             Text(title)
                 .font(.system(size: fontSize))
-                .foregroundColor(.white)
+                .foregroundColor(foregroundColor)
                 .frame(width: size.width, height: size.height, alignment: Alignment.center)
                 .background(Color(backgroundColorName))
                 .cornerRadius(size.width / 2)
@@ -38,7 +39,7 @@ struct CalculatorButtonRow: View {
     var body: some View {
         HStack {
             ForEach(row, id: \.self) { item in
-                CalculatorButton(title: item.title, size: item.size, backgroundColorName: item.backgroundColorName) {
+                CalculatorButton(title: item.title, size: item.size, backgroundColorName: item.backgroundColorName, foregroundColor: item.foregroundColor) {
                     //self.brain = self.brain.apply(item: item)
                     self.model.apply(item)
                 }
@@ -50,7 +51,7 @@ struct CalculatorButtonRow: View {
 struct CalculatorButtonPad: View {
     
     //@Binding var brain: CalculatorBrain
-    var model: CalculatorModel
+    //var model: CalculatorModel
     
     let pad: [[CalculatorButtonItem]] = [
         [.command(.clear), .command(.flip), .command(.percent), .op(.divide)],

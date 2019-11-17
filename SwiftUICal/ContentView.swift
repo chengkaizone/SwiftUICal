@@ -15,21 +15,27 @@ struct ContentView: View {
     
     //@State
     //private var brain: CalculatorBrain = .left("0")
-    @ObservedObject var model = CalculatorModel()
+    @State private var editingHistory = false
+    @EnvironmentObject var model: CalculatorModel
     
     var body: some View {
 
         VStack(spacing: 12) {
             Spacer()
             Button("操作历史：\(model.history.count)") {
-                print(self.model.history.count)
+                
+                self.editingHistory = true
+            }.sheet(isPresented: $editingHistory, onDismiss: {
+                NSLog("---> \(self.editingHistory)")
+            }) {
+                HistoryView(model: self.model)
             }
             Text(model.brain.output)
                 .font(.system(size: 76))
                 .padding(.trailing, 24)
                 .lineLimit(1)
                 .frame(minWidth: 0, maxWidth: .infinity, alignment: .trailing)
-            CalculatorButtonPad(model: model).padding(.bottom)
+            CalculatorButtonPad().padding(.bottom)
         }.scaleEffect(scale)
         
     }

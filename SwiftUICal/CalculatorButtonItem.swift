@@ -78,6 +78,15 @@ extension CalculatorButtonItem: Hashable {
         }
     }
     
+    var foregroundColor: Color {
+        switch self {
+        case .command:
+            return Color("commandForeground")
+        default:
+            return .white
+        }
+    }
+    
 }
 
 extension CalculatorButtonItem: CustomStringConvertible {
