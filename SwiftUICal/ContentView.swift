@@ -22,15 +22,16 @@ struct ContentView: View {
 
         VStack(spacing: 12) {
             Spacer()
-            Button("操作历史：\(model.history.count)") {
-                
+            // 对于界面需要数据模型的渲染会失败，预览时使用静态数据替代
+            Button("操作历史:\(model.history.count)") {
                 self.editingHistory = true
-            }.sheet(isPresented: $editingHistory, onDismiss: {
+            }
+            .sheet(isPresented: $editingHistory, onDismiss: {
                 NSLog("---> \(self.editingHistory)")
             }) {
                 HistoryView(model: self.model)
             }
-            Text(model.brain.output)
+            Text("\(model.brain.output)")
                 .font(.system(size: 76))
                 .minimumScaleFactor(0.5)
                 .padding(.horizontal, 24 * scale)

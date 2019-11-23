@@ -70,3 +70,9 @@ struct CalculatorButtonPad: View {
     }
 }
 
+struct CalculatorButtonPad_Previews: PreviewProvider {
+    static var previews: some View {
+        CalculatorButtonPad()
+    }
+}
+
